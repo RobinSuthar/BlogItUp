@@ -2,6 +2,22 @@ import { Hono } from "hono";
 
 export const main = new Hono();
 
-main.get("/user", (c) => {
+main.post("/signin", (c) => {
+  return c.text("Hello");
+});
+
+main.post("/signin", (c) => {
+  return c.text("Hello");
+});
+
+main.get("/blog", (c) => {
+  return c.text("Hello");
+});
+
+main.post("/blog", (c) => {
+  return c.text("Hello");
+});
+
+main.put("/blog", (c) => {
   return c.text("Hello");
 });
