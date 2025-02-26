@@ -10,7 +10,7 @@ main.post("/signin", (c) => {
   return c.text("Hello");
 });
 
-main.get("/blog", (c) => {
+main.get("/blog/:id", (c) => {
   return c.text("Hello");
 });
 
