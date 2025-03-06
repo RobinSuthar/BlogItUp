@@ -10,5 +10,22 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = env("DATABASE_URL") 
+}
+
+model User {
+  id String @id @default(uuid())
+  email String @unique
+  name String
+  password String
+  posts Post[]
+}
+
+model Post{
+id String @id @default(uuid())
+  title String @unique
+  content String
+  published String
+  author User @relation(fields: [authorId], references: [id])
+  authorId String  
 }
